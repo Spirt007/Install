@@ -16,14 +16,11 @@ echo
 mount /dev/sda1 /mnt
 mkdir /mnt/home
 mkdir /mnt/Linux
-mkdir /Stock
+mkdir /mnt/Stock
 mount /dev/sda4 /mnt/home
 mount /dev/sda2 /mnt/Linux
-mount /dev/sdb /mnt/Stock
+mount /dev/sdb5 /mnt/Stock
 swapon /dev/sda3
-
-echo 'Выбор зеркал для загрузки. Ставим зеркало от Яндекс'
-echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
 echo 'Установка основных пакетов'
 pacstrap /mnt base base-devel
