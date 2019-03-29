@@ -19,9 +19,9 @@ mkdir /mnt/Linux
 mkdir /Stock
 mount /dev/sda4 /mnt/home
 mount /dev/sda2 /mnt/Linux
-swapon /dev/sda3
 mount /dev/sdb /mnt/Stock
-echo
+swapon /dev/sda3
+
 echo 'Выбор зеркал для загрузки. Ставим зеркало от Яндекс'
 echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
