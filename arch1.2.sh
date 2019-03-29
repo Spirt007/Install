@@ -26,7 +26,7 @@ mkinitcpio -p linux
 echo 'Устанавливаем загрузчик'
 pacman -Syy
 pacman -S grub --noconfirm 
-grub-install /dev/sda1
+grub-install /dev/sda
 
 echo 'Обновляем grub.cfg'
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -51,29 +51,31 @@ echo '[multilib]' >> /etc/pacman.conf
 echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf
 pacman -Syy
 
-echo "Куда устанавливем Arch Linux на виртуальную машину?"
-read -p "1 - Да, 0 - Нет: " vm_setting
-if [[ $vm_setting == 0 ]]; then
-  gui_install="xorg-server xorg-drivers xorg-xinit"
-elif [[ $vm_setting == 1 ]]; then
-  gui_install="xorg-server xorg-drivers xorg-xinit virtualbox-guest-utils"
+echo "Устанавливем X"
+pacman -S xorg-server xorg-drivers xorg-xinit xorg-apps mesa-ligl xterm lib32-mesa-libgl
+
+echo "Какая видеокарта у вас?"
+read -p "1 - Intel, 2 - Nvidia, 3 - AMD" vm_setting
+if [[ $vm_setting == 1 ]]; then
+  pacman -S xf86-video-intel --noconfirm
+elif [[ $vm_setting == 2 ]]; then
+  pacman -S xf86-video-nouveau --noconfirm
+elif [[ $vm_setting == 3 ]]; then
+  pacman -S  xf86-video-ati --noconfirm
 fi
 
-echo 'Ставим иксы и драйвера'
-pacman -S $gui_install
-
 echo "Какое DE ставим?"
-read -p "1 - XFCE, 2 - KDE,3-Cinnammon" vm_setting
+read -p "1 - XFCE, 2 - KDE,3 - Cinnammon" vm_setting
 if [[ $vm_setting == 1 ]]; then
   pacman -S xfce4 xfce4-goodies --noconfirm
 elif [[ $vm_setting == 2 ]]; then
   pacman -Sy plasma-meta kdebase --noconfirm
- elif [[ $vm_setting == 3 ]]; then
+elif [[ $vm_setting == 3 ]]; then
   pacman -S  cinnamon nemo-fileroller --noconfirm
 fi
 
 echo 'Ставим шрифты'
-pacman -S ttf-liberation ttf-dejavu --noconfirm 
+pacman -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphik-ukai ttf-arphik-uming ttf-hanazono --noconfirm 
 
 echo 'Ставим сеть'
 pacman -S networkmanager network-manager-applet ppp --noconfirm
