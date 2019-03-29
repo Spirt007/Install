@@ -13,6 +13,8 @@ sda3 - swap
 
 sda4 - home
 
+sdb - stock (second hard drive,not formatted)
+
 УСТНАНОВКА НА РАЗБИТЫЙ УЖЕ ДИСК 
 
 ВСЕ РАЗДЕЛЫ ФОРМАТИРУЮТСЯ EXT4
@@ -26,3 +28,5 @@ sda2 - linux
 sda3 - swap
 
 sda4 - home
+
+sdb - stock (второй жесткий диск,не форматируется)
