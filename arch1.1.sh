@@ -15,10 +15,12 @@ echo 'Монтирование'
 echo
 mount /dev/sda1 /mnt
 mkdir /mnt/home
-mkdir /mnt/kali
+mkdir /mnt/Linux
+mkdir /Stock
 mount /dev/sda4 /mnt/home
 mount /dev/sda2 /mnt/Linux
 swapon /dev/sda3
+mount /dev/sdb /mnt/Stock
 echo
 echo 'Выбор зеркал для загрузки. Ставим зеркало от Яндекс'
 echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
