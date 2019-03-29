@@ -4,8 +4,9 @@ setfont cyr-sun16
 timedatectl set-ntp true
 
 echo 'Форматирование'
+echo
 pacman -Sy --noconfirm
-#mkfs.ext4 /dev/sda4 -L home
+mkfs.ext4 /dev/sda4 -L home
 mkfs.ext4 /dev/sda1 -L root
 mkswap /dev/sda3 -L swap
 mkfs.ext4 /dev/sda2 -L Linux
