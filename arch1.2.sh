@@ -6,7 +6,7 @@ echo 'Прописываем имя компьютера'
 echo $hostname > /etc/hostname
 ln -svf /usr/share/zoneinfo/Europa/Moscow /etc/localtime
 
-echo '3.4 Добавляем русскую локаль системы'
+echo 'Добавляем русскую локаль системы'
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen 
 
@@ -23,10 +23,10 @@ echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 echo 'Создадим загрузочный RAM диск'
 mkinitcpio -p linux
 
-echo '3.5 Устанавливаем загрузчик'
+echo 'Устанавливаем загрузчик'
 pacman -Syy
 pacman -S grub --noconfirm 
-grub-install /dev/sda
+grub-install /dev/sda1
 
 echo 'Обновляем grub.cfg'
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -84,7 +84,7 @@ systemctl enable NetworkManager
 echo 'Установка SDDM'
   pacman -S sddm sddm-kcm --noconfirm
   systemctl enable sddm.service -f
-  sudo systemctl start sddm
+  systemctl start sddm
 
 
 echo 'Установка завершена! Перезагрузите систему.'
