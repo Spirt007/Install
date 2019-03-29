@@ -86,6 +86,4 @@ echo 'Установка SDDM'
   systemctl enable sddm.service -f
   systemctl start sddm
 
-
-echo 'Установка завершена! Перезагрузите систему.'
 exit
