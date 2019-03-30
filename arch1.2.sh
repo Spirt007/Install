@@ -52,7 +52,7 @@ echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf
 pacman -Syy
 
 echo "Устанавливем X"
-pacman -S xorg-server xorg-drivers xorg-xinit xorg-apps mesa-ligl xterm lib32-mesa-libgl
+pacman -S xorg-server xorg-drivers xorg-xinit xorg-apps mesa-ligl xterm lib32-mesa-libgl --noconfirm
 
 echo "Какая видеокарта у вас?"
 read -p "1 - Intel, 2 - Nvidia, 3 - AMD" vm_setting
@@ -86,6 +86,6 @@ systemctl enable NetworkManager
 echo 'Установка SDDM'
   pacman -S sddm sddm-kcm --noconfirm
   systemctl enable sddm.service -f
-  systemctl start sddm
-
+  
+echo 'Установка завершена! Перезагрузите систему.'
 exit
