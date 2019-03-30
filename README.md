@@ -13,7 +13,9 @@ sda3 - swap
 
 sda4 - home
 
-sdb - stock (second hard drive,not formatted)
+sdb5 - stock (second hard drive,not formatted)
+
+wget spirt007.github.io/Install-Arch/arch1.1.sh && sh arch1.1.sh
 
 УСТНАНОВКА НА РАЗБИТЫЙ УЖЕ ДИСК 
 
@@ -29,4 +31,4 @@ sda3 - swap
 
 sda4 - home
 
-sdb - stock (второй жесткий диск,не форматируется)
+sdb5 - stock (второй жесткий диск,не форматируется)
