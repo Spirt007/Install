@@ -36,7 +36,7 @@ elif [[ $vm_setting == 2 ]]; then
 elif [[ $vm_setting == 3 ]]; then
   pacman -S  xf86-video-ati --noconfirm
 fi
-echo "Какое DE ставим?"
+echo "Какое Рабочее окружение ставим?"
 read -p "1 - XFCE, 2 - KDE,3 - Cinnammon" vm_setting
 if [[ $vm_setting == 1 ]]; then
   pacman -S xfce4 xfce4-goodies --noconfirm
@@ -48,7 +48,7 @@ fi
 pacman -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphik-ukai ttf-arphik-uming ttf-hanazono --noconfirm 
 pacman -S networkmanager network-manager-applet ppp --noconfirm
 systemctl enable NetworkManager
-  pacman -S sddm sddm-kcm --noconfirm
-  systemctl enable sddm.service -f
- echo 'Установка завершена! Перезагрузите систему.'
+pacman -S sddm sddm-kcm --noconfirm
+systemctl enable sddm.service 
+echo 'Установка завершена! Перезагрузите систему.'
 exit
