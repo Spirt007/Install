@@ -13,7 +13,7 @@ mkdir /mnt/linux
 mkdir /mnt/stock
 mount /dev/sda4 /mnt/home
 mount /dev/sda2 /mnt/linux
-mount /dev/sdb /mnt/stock
+mount /dev/sdb5 /mnt/stock
 swapon /dev/sda3
 pacstrap /mnt base base-devel
 genfstab -pU /mnt >> /mnt/etc/fstab
