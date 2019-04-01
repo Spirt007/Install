@@ -10,10 +10,10 @@ mkfs.ext4 /dev/sda4 -L home
 mount /dev/sda1 /mnt
 mkdir /mnt/home
 mkdir /mnt/linux
-mkdir /mnt/stock
+
 mount /dev/sda4 /mnt/home
 mount /dev/sda2 /mnt/linux
-mount /dev/sdb5 /mnt/stock
+
 swapon /dev/sda3
 pacstrap /mnt base base-devel
 genfstab -pU /mnt >> /mnt/etc/fstab
