@@ -9,11 +9,11 @@ mkswap /dev/sda3 -L swap
 mkfs.ext4 /dev/sda4 -L home
 mount /dev/sda1 /mnt
 mkdir /mnt/home
-mkdir /mnt/Linux
-mkdir /mnt/Stock
+mkdir /mnt/linux
+mkdir /mnt/stock
 mount /dev/sda4 /mnt/home
-mount /dev/sda2 /mnt/Linux
-mount /dev/sdb5 /mnt/Stock
+mount /dev/sda2 /mnt/linux
+mount /dev/sdb5 /mnt/stock
 swapon /dev/sda3
 echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel
