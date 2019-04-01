@@ -19,6 +19,6 @@ swapon /dev/sda3
 
 echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
-pacstarp /mnt base base-devel
+pacstrap /mnt base base-devel
 genfstab -pU /mnt >> /mnt/etc/fstab
 arch-chroot /mnt sh -c "$(curl -fsSL  spirt007.github.io/Install-Arch/arch1.2.sh)"
