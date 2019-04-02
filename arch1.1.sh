@@ -75,4 +75,4 @@ pacstrap /mnt base base-devel
 echo '3.3 Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL spirt007.github.io/arch1.2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL spirt007.github.io/Install/arch1.2.sh)"
