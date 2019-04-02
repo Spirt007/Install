@@ -60,7 +60,7 @@ mkfs.ext4  /dev/sda4 -L home
 
 echo '2.4.3 Монтирование дисков'
 mount /dev/sda2 /mnt
-mkdir /mnt/{root,linux,stock}
+mkdir /mnt/{home,linux,stock}
 mount /dev/sda1 /mnt/linux
 swapon /dev/sda3
 mount /dev/sda4 /mnt/home
