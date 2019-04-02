@@ -3,17 +3,17 @@ loadkeys ru
 setfont cyr-sun16
 timedatectl set-ntp true
 pacman -Sy --noconfirm
-mkfs.ext4 /dev/sda2 -L root
-mkfs.ext4 /dev/sda1 -L linux
+mkfs.ext4 /dev/sda1 -L root
+mkfs.ext4 /dev/sda2 -L linux
 mkswap /dev/sda3 -L swap
 mkfs.ext4 dev/sda4 -L home
-mount /dev/sda2 /mnt
+mount /dev/sda1 /mnt
 mkdir /mnt/home
 mkdir /mnt/linux
-mkdir /mnt/stock
-mount /dev/sda1 /mnt/linux
+
+mount /dev/sda2 /mnt/linux
 mount /dev/sda4 /mnt/home
-mount /dev/sdb5 /mnt/stock
+
 swapon /dev/sda3
 echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 pacstarp /mnt base base-devel
