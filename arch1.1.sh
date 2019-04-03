@@ -25,13 +25,13 @@ echo '2.4 создание разделов'
   echo;
   echo;
   echo;
-  echo +20G;
+  echo +30G;
 
   echo n;
   echo;
   echo;
   echo;
-  echo +20G;
+  echo +30G;
 
   echo n;
   echo;
@@ -53,15 +53,15 @@ echo 'Ваша разметка диска'
 fdisk -l
 
 echo '2.4.2 Форматирование дисков'
-mkfs.ext2  /dev/sda1 -L root
-mkfs.ext4  /dev/sda2 -L linux
+mkfs.ext2  /dev/sda1 -L linux
+mkfs.ext4  /dev/sda2 -L root
 mkswap /dev/sda3 -L swap
 mkfs.ext4  /dev/sda4 -L home
 
 echo '2.4.3 Монтирование дисков'
-mount /dev/sda1 /mnt
-mkdir /mnt/{home,linux,stock}
-mount /dev/sda2 /mnt/linux
+mount /dev/sda2 /mnt
+mkdir /mnt/{root,linux,stock}
+mount /dev/sda1 /mnt/linux
 swapon /dev/sda3
 mount /dev/sda4 /mnt/home
 mount /dev/sdb5 /mnt/stock
@@ -75,4 +75,4 @@ pacstrap /mnt base base-devel
 echo '3.3 Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL git.io/arch2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL spirt007.github.io/arch1.2.sh)"
