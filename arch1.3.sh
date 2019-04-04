@@ -13,9 +13,9 @@ sudo pacman -S xdg-user-dirs --noconfirm
 xdg-user-dirs-update
 
 echo 'Установка программ'
-sudo pacman -S firefox firefox-i18n-ru alsa-lib alsa-utils os-prober file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru 
+sudo pacman -S firefox firefox-i18n-ru alsa-lib alsa-utils os-prober double commander file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru 
 filezilla kdenlive screenfetch vlc pidgin transmission-gtk transmission-cli djview4 gparted gnome-calculator conky conky-manager --noconfirm
-  yay -S pamac-aur gksu flameshot-git sublime-text-dev sddm-config-editor-git --noconfirm
+  yay -S pamac-aur gksu flameshot-git sublime-text-dev sddm-config-editor-git zenity --noconfirm
 
   echo 'Установка тем'
   yay -S osx-arc-shadow papirus-maia-icon-theme-git breeze-default-cursor-theme --noconfirm
