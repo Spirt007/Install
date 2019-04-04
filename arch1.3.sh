@@ -13,7 +13,7 @@ sudo pacman -S xdg-user-dirs --noconfirm
 xdg-user-dirs-update
 
 echo 'Установка программ'
-sudo pacman -S firefox firefox-i18n-ru alsa-lib alsa-utils os-prober Double Commander file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru filezilla kdenlive screenfetch vlc pidgin transmission-gtk transmission-cli djview4 gparted gnome-calculator conky conky-manager --noconfirm 
+sudo pacman -S firefox firefox-i18n-ru alsa-lib alsa-utils os-prober doublecmd-gtk2 file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru filezilla kdenlive screenfetch vlc pidgin transmission-gtk transmission-cli djview4 gparted gnome-calculator conky conky-manager --noconfirm 
   yay -S pamac-aur gksu flameshot-git sublime-text-dev sddm-config-editor-git zenity --noconfirm
 
   echo 'Установка тем'
