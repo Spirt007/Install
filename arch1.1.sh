@@ -53,15 +53,15 @@ echo 'Ваша разметка диска'
 fdisk -l
 
 echo '2.4.2 Форматирование дисков'
-mkfs.ext2  /dev/sda1 -L linux
-mkfs.ext4  /dev/sda2 -L root
+
+mkfs.ext4  /dev/sda1 -L root
 mkswap /dev/sda3 -L swap
 mkfs.ext4  /dev/sda4 -L home
 
 echo '2.4.3 Монтирование дисков'
-mount /dev/sda2 /mnt
-mkdir /mnt/{root,linux,stock}
-mount /dev/sda1 /mnt/linux
+mount /dev/sda1 /mnt
+mkdir /mnt/{home,linux,stock}
+mount /dev/sda2 /mnt/linux
 swapon /dev/sda3
 mount /dev/sda4 /mnt/home
 mount /dev/sdb5 /mnt/stock
