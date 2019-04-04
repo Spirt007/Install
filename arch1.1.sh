@@ -59,9 +59,9 @@ mkswap /dev/sda3 -L swap
 mkfs.ext4  /dev/sda4 -L home
 
 echo '2.4.3 Монтирование дисков'
-mount /dev/sda2 /mnt
-mkdir /mnt/{root,linux,stock}
-mount /dev/sda1 /mnt/linux
+mount /dev/sda1 /mnt
+mkdir /mnt/{root,linux,stock,home}
+mount /dev/sda2 /mnt/linux
 swapon /dev/sda3
 mount /dev/sda4 /mnt/home
 mount /dev/sdb5 /mnt/stock
