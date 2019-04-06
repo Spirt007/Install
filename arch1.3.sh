@@ -13,7 +13,7 @@ xdg-user-dirs-update
 
 echo 'Установка программ'
 sudo pacman -S firefox firefox-i18n-ru alsa-lib alsa-utils ttf-liberation ttf-dejavu bash-completion gpm opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-hanazono lib32-mesa-libgl os-prober doublecmd-gtk2 file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru filezilla kdenlive screenfetch vlc pidgin transmission-gtk transmission-cli djview4 gparted gnome-calculator conky conky-manager --noconfirm 
-  yay -S pamac-aur gksu flameshot-git sublime-text-dev sddm-config-editor-git zenity pidgin-mrim-prpl  --noconfirm
+  yay -S pamac-aur gksu flameshot-git sublime-text-dev downgrade sddm-config-editor-git zenity pidgin-mrim-prpl unetbootin --noconfirm
 
     sudo pacman -S capitaine-cursors
   
