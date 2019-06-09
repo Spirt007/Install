@@ -3,8 +3,7 @@
 
 loadkeys ru
 setfont cyr-sun16
-echo 'Скрипт сделан на основе чеклиста Бойко Алексея по Установке ArchLinux'
-echo 'Ссылка на чек лист есть в группе vk.com/arch4u'
+
 
 echo '2.3 Синхронизация системных часов'
 timedatectl set-ntp true
@@ -66,4 +65,4 @@ pacstrap /mnt base base-devel
 echo '3.3 Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL git.io/arch2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL spirt007.github.io/Install/arch1.2.sh)"
