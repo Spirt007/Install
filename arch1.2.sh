@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 read -p "Введите имя компьютера: " hostname
 read -p "Введите имя пользователя: " username
 
