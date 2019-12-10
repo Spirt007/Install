@@ -4,7 +4,7 @@ read -p "Введите имя пользователя: " username
 
 echo 'Прописываем имя компьютера'
 echo $hostname > /etc/hostname
-ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+ln -svf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 
 echo '3.4 Добавляем русскую локаль системы'
