@@ -73,8 +73,8 @@ elif [[ $vm_setting == 3 ]]; then
 fi
 
 echo 'Cтавим DM'
-pacman -S sddm sddm-kcm --noconfirm
-systemctl sddm.service -f
+pacman -S lxdm --noconfirm
+systemctl enable lxdm
 
 echo 'Ставим шрифты'
 pacman -S ttf-liberation ttf-dejavu --noconfirm 
