@@ -73,8 +73,8 @@ elif [[ $vm_setting == 3 ]]; then
 fi
 
 echo 'Cтавим DM'
-pacman -S lxdm --noconfirm
-systemctl enable lxdm
+pacman -S sddm sddm-kcm --noconfirm
+systemctl sddm.service -f
 
 echo 'Ставим шрифты'
 pacman -S ttf-liberation ttf-dejavu --noconfirm 
@@ -87,5 +87,5 @@ systemctl enable NetworkManager
 
 echo 'Установка завершена! Перезагрузите систему.'
 echo 'Если хотите подключить AUR, установить мои конфиги XFCE, тогда после перезагрзки и входа в систему, установите wget (sudo pacman -S wget) и выполните команду:'
-echo 'wget git.io/arch3.sh && sh arch3.sh'
+echo 'wget spirt007.github.io/Install/arch1.3.sh && sh arch1.3.sh'
 exit
