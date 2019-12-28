@@ -12,7 +12,7 @@ sudo pacman -S xdg-user-dirs --noconfirm
 xdg-user-dirs-update
 
 echo 'Установка программ'
-sudo pacman -S firefox firefox-i18n-ru alsa-lib alsa-utils ttf-liberation ttf-dejavu bash-completion gpm opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-hanazono lib32-mesa-libgl os-prober doublecmd-gtk2 file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru filezilla kdenlive screenfetch vlc pidgin transmission-gtk transmission-cli djview4 gparted gnome-calculator conky conky-manager leafpad thunderbird gpicview --noconfirm 
+sudo pacman -S pavucontrol telegram-desktop firefox firefox-i18n-ru alsa-lib alsa-utils ttf-liberation ttf-dejavu bash-completion gpm opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-hanazono lib32-mesa-libgl os-prober doublecmd-gtk2 file-roller p7zip unrar gvfs aspell-ru pulseaudio gimp libreoffice libreoffice-fresh-ru filezilla kdenlive screenfetch vlc pidgin transmission-gtk transmission-cli djview4 gparted gnome-calculator conky conky-manager leafpad thunderbird gpicview steam --noconfirm 
 yay -S pamac-aur gksu sublime-text-dev downgrade sddm-config-editor-git zenity pidgin-mrim-prpl --noconfirm
 
 echo 'Установка тем'
@@ -25,6 +25,6 @@ sudo mv -f ~/Downloads/arch_logo.png /usr/share/pixmaps/arch_logo.png
 
 
 sudo rm -rf ~/Downloads
-sudo rm -rf ~/arch3.sh
+sudo rm -rf ~/arch1.3.sh
 
 echo 'Установка завершена!'
