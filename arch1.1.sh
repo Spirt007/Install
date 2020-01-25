@@ -45,7 +45,6 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 mkfs.ext2  /dev/sda1 -L root
-mkfs.ext2  /dev/sda4 -L home
 mkswap /dev/sda3 -L swap
 
 
